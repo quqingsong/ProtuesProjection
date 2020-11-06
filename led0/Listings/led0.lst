@@ -1,0 +1,58 @@
+C51 COMPILER V9.54   LED0                                                                  11/04/2020 17:49:31 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE LED0
+OBJECT MODULE PLACED IN .\Objects\led0.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE led0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\led0
+                    -.lst) TABS(2) OBJECT(.\Objects\led0.obj)
+
+line level    source
+
+   1          #include"reg51.h"
+   2          
+   3          sbit led0=P2^0;
+   4          sbit led1=P2^1;
+   5          sbit led2=P2^2;
+   6          sbit led7=P2^7;
+   7          
+   8          
+   9          
+  10          //—” ±
+  11          void delay(unsigned int n)
+  12          {
+  13   1          unsigned int i=0,j=0;
+  14   1          for(i=0;i<n;i++){
+  15   2              for(j=0;j<10000;j++);
+  16   2          }
+  17   1      }
+  18          void main(){
+  19   1        while(1){
+  20   2          
+  21   2          led0=0;
+  22   2          led1=1;
+  23   2          led2=1;
+  24   2          led7=1;
+  25   2          delay(20);
+  26   2          led0=1;
+  27   2          led1=0;
+  28   2          led2=0;
+  29   2          led7=0;
+  30   2          delay(20);
+  31   2      
+  32   2      
+  33   2        }
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     60    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
