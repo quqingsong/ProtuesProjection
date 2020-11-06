@@ -1,0 +1,13 @@
+C51 COMPILER V9.54   STATICDIGITALTUBE                                                     11/06/2020 11:25:16 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE STATICDIGITALTUBE
+OBJECT MODULE PLACED IN .\Objects\StaticDigitalTube.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE StaticDigitalTube.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\
+                    -Listings\StaticDigitalTube.lst) TABS(2) OBJECT(.\Objects\StaticDigitalTube.obj)
+
+line level    source
+
+*** ERROR C318 OF StaticDigitalTube.c: can't open file 'StaticDigitalTube.c'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

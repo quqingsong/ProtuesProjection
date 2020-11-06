@@ -1,0 +1,113 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/06/2020  13:50:24  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\second.obj TO .\Objects\StaticDigitalTube PRINT (.\Listings\StaticDigitalTube.m51)
+>> 
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\second.obj (SECOND)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\StaticDigitalTube (SECOND)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     002EH     UNIT         ?DT?SECOND
+            DATA    0036H     0002H     UNIT         _DATA_GROUP_
+            IDATA   0038H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0038H     UNIT         ?PR?SEGLIGHTUP?SECOND
+            CODE    00C7H     0035H     UNIT         ?C_INITSEG
+            CODE    00FCH     0020H     UNIT         ?PR?_DELAY?SECOND
+            CODE    011CH     0005H     UNIT         ?PR?MAIN?SECOND
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\StaticDigitalTube (SECOND)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?SECOND
+  +--> ?C_INITSEG
+
+?PR?MAIN?SECOND                -----    -----
+  +--> ?PR?SEGLIGHTUP?SECOND
+
+?PR?SEGLIGHTUP?SECOND          0036H    0002H
+  +--> ?PR?_DELAY?SECOND
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\StaticDigitalTube (SECOND)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/06/2020  13:50:24  PAGE 2
+
+
+
+  -------         MODULE        SECOND
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  C:008FH         PUBLIC        segLightUp
+  D:00B0H         PUBLIC        P3
+  C:00FCH         PUBLIC        _delay
+  D:0008H         PUBLIC        Bit
+  C:011CH         PUBLIC        main
+  D:0018H         PUBLIC        str
+  D:0022H         PUBLIC        s
+  -------         PROC          MAIN
+  C:011CH         LINE#         13
+  C:011CH         LINE#         14
+  C:011CH         LINE#         15
+  C:011FH         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         PROC          SEGLIGHTUP
+  -------         DO            
+  D:0036H         SYMBOL        i
+  -------         ENDDO         
+  C:008FH         LINE#         20
+  C:008FH         LINE#         21
+  C:008FH         LINE#         22
+  C:0094H         LINE#         23
+  C:0098H         LINE#         24
+  C:00A4H         LINE#         25
+  C:00AEH         LINE#         26
+  C:00B5H         LINE#         27
+  C:00C6H         LINE#         28
+  -------         ENDPROC       SEGLIGHTUP
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        n
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:00FCH         LINE#         32
+  C:00FCH         LINE#         33
+  C:00FCH         LINE#         34
+  C:00FFH         LINE#         35
+  C:0106H         LINE#         36
+  C:0114H         LINE#         37
+  C:011BH         LINE#         38
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        SECOND
+
+Program Size: data=57.0 xdata=0 code=289
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
